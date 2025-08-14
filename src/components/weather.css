@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --blue: rgba(80, 170, 255, 0.921);
+}
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+}
+.container {
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px;
+  width: 500px;
+  border-radius: 5px;
+}
+h1 {
+  color: var(--blue);
+  padding: 15px;
+}
+.inner-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+button,
+input,
+.show-weather {
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: white;
+  outline: none;
+  width: 80%;
+  height: 90%;
+  padding: 20px;
+  margin: 25px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+.show-weather {
+  background-color: var(--blue);
+  color: white;
+}
+button {
+  background-color: var(--blue);
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
+}
+.hr1 {
+  border: 0.1px solid rgb(183, 180, 180);
+  width: 100%;
+}
+.hr2 {
+  width: 90%;
+  border: none;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgb(199, 194, 194) 40%,
+    transparent 45% 55%,
+    rgb(199, 194, 194) 60%
+  );
+}
+
+.hr2::before {
+  content: "or";
+  position: absolute;
+  bottom: 115px; /* moves it above the line */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25px;
+  font-family: sans-serif;
+}
